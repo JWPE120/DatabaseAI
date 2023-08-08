@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Page</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #0d103b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .line {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: #000000;
+    transition: width 2s;
+  }
+
+  .left-line {
+    left: 0;
+  }
+
+  .right-line {
+    right: 0;
+  }
+
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(1,1,4);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+</style>
+</head>
+<body>
+  <div class="line left-line"></div>
+  <div class="line right-line"></div>
+  <div class="box">Selamat Datang</div>
+  <script>
+    const leftLine = document.querySelector('.left-line');
+    const rightLine = document.querySelector('.right-line');
+    const box = document.querySelector('.box');
+
+    leftLine.style.width = '50%';
+    rightLine.style.width = '50%';
+
+    setTimeout(() => {
+      leftLine.style.width = '0';
+      rightLine.style.width = '0';
+      setTimeout(() => {
+        box.style.opacity = '1';
+        setTimeout(() => {
+          window.location.href = 'https://jwpe120.github.io/akael_25/Index2.html#'; // Ganti dengan URL halaman tujuan Anda
+        }, 5000); // Setelah 5 detik, arahkan pengguna ke halaman tujuan
+      }, 1000);
+    }, 2000);
+  </script>
+</body>
+</html>
