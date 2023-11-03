@@ -1,72 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loading Page</title>
-<style>
-  body {
-    margin: 0;
-    overflow: hidden;
-    background-color: #0d103b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-
-  .line {
-    position: absolute;
-    height: 100%;
-    width: 0;
-    background-color: #000000;
-    transition: width 2s;
-  }
-
-  .left-line {
-    left: 0;
-  }
-
-  .right-line {
-    right: 0;
-  }
-
-  .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(1,1,4);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 1s;
-  }
-</style>
+    <meta http-equiv="refresh" content="5;url=https://jwpentertainments.eu.org/web/proyek/akl1">
+    <title>Pengalihan Halaman</title>
 </head>
 <body>
-  <div class="line left-line"></div>
-  <div class="line right-line"></div>
-  <div class="box">Selamat Datang</div>
-  <script>
-    const leftLine = document.querySelector('.left-line');
-    const rightLine = document.querySelector('.right-line');
-    const box = document.querySelector('.box');
-
-    leftLine.style.width = '50%';
-    rightLine.style.width = '50%';
-
-    setTimeout(() => {
-      leftLine.style.width = '0';
-      rightLine.style.width = '0';
-      setTimeout(() => {
-        box.style.opacity = '1';
-        setTimeout(() => {
-          window.location.href = 'https://jwpe120.github.io/akael_25/Index2.html#';
-        }, 3000);
-      }, 1000);
-    }, 3000); // Mengubah waktu tunggu menjadi 3 detik
-  </script>
+    <p>Halaman ini akan mengalihkan Anda ke halaman lain dalam 5 detik. Jika tidak, klik <a href="https://jwpentertainments.eu.org/web/proyek/akl1">di sini</a>.</p>
 </body>
 </html>
