@@ -1,15 +1,47 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="refresh" content="5;url=https://jwpentertainments.eu.org/web/proyek/akl1">
     <title>Pengalihan Halaman</title>
- <style>
-  p {
-   text-align : center;
-  } 
- </style>
+    <style>
+        body {
+            background-color: #3498db;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        p {
+            color: white;
+            font-size: 24px;
+        }
+        
+        a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p>Halaman ini akan mengalihkan Anda ke halaman lain dalam 5 detik. Jika tidak, klik <a href="https://jwpentertainments.eu.org/web/proyek/akl1">di sini</a>.</p>
+    <p id="redirectText">Halaman ini akan mengalihkan Anda ke halaman lain dalam 5 detik. Jika tidak, klik <a href="https://jwpentertainments.eu.org/web/proyek/akl1">di sini</a>.</p>
+    <script>
+        // JavaScript untuk animasi teks
+        const redirectText = document.getElementById("redirectText");
+        let counter = 5;
+        
+        function updateText() {
+            if (counter > 0) {
+                redirectText.innerHTML = `Halaman ini akan mengalihkan Anda ke halaman lain dalam ${counter} detik.`;
+                counter--;
+                setTimeout(updateText, 1000); // Update setiap 1 detik
+            }
+        }
+        
+        // Panggil fungsi pertama kali
+        updateText();
+    </script>
 </body>
 </html>
